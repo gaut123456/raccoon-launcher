@@ -1,0 +1,21 @@
+{
+  "name": "zoolauncher",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "minecraft-launcher-core": "^3.18.1",
+    "msmc": "^5.0.5"
+  },
+  "devDependencies": {
+    "electron": "^31.2.1",
+    "electron-packager": "^17.1.2"
+  }
+}
