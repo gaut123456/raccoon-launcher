@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="titlebar">
+        <div id="drag-region">
+            <div id="window-title">Minecraft Launcher</div>
+            <div id="window-controls">
+                <button id="min-button">-</button>
+                <button id="max-button">□</button>
+                <button id="close-button">×</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <img src="logo.png" alt="Minecraft Logo" class="logo">
+            <nav>
+                <button class="nav-button active"><i class="fas fa-play"></i> Play</button>
+                <button class="nav-button"><i class="fas fa-cog"></i> Settings</button>
+                <button class="nav-button"><i class="fas fa-user"></i> Profile</button>
+            </nav>
+            <div class="hypixel-count">
+                <h3>Hypixel Players</h3>
+                <p id="playerCount">Loading...</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Minecraft Launcher</h1>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <div id="statusMessage" class="status-message">Ready to launch</div>
+            <button id="launchButton" class="launch-button">
+                <i class="fas fa-play"></i> Play
+            </button>
+        </div>
+    </div>
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <div class="settings">
+                <label for="ramSlider">Max RAM Allocation: <span id="ramValue">6 GB</span></label>
+                <input type="range" id="ramSlider" min="2" max="16" value="6" step="2">
+            </div>
+            <button id="saveSettings" class="save-button">Save Settings</button>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
