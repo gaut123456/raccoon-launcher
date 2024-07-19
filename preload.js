@@ -9,5 +9,6 @@ contextBridge.exposeInMainWorld('electronAPI', {
     maximizeWindow: () => ipcRenderer.send('maximize-window'),
     closeWindow: () => ipcRenderer.send('close-window'),
     onLaunchComplete: (callback) => ipcRenderer.on('launch-complete', callback),
-    onLaunchError: (callback) => ipcRenderer.on('launch-error', callback) // Add this line
+    onLaunchError: (callback) => ipcRenderer.on('launch-error', callback) ,
+    downloadFiles: () => ipcRenderer.invoke('download-files'),
 })

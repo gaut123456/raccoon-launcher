@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             launchButton.disabled = true;
             if (statusMessage) statusMessage.textContent = 'Preparing to launch Minecraft...';
             if (progressBar) progressBar.style.width = '0%';
+            await window.electronAPI.downloadFiles();
 
             try {
                 await window.electronAPI.launchMinecraft({
@@ -46,7 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
 						custom: "fabric"
 						
                     },
-                    memory: {
+                    quickPlay: {
+                        type: "multiplayer",
+                        identifier: "hypixel.net"
+                    },
+                        memory: {
                         max: maxRam,
                         min: "2G"
                     }
